@@ -43,7 +43,7 @@ metadata:
   namespace: expense
 spec:
   selector:
-    aapp: backend
+    app: backend
     tier: api 
     project: expense
   ports:
