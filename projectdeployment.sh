@@ -1,11 +1,10 @@
-kubectl get nodes
-cd ..
-git clone https://github.com/suprajaspace/01.k8-expense.git
-cd 01.k8-expense/
+# kubectl get nodes
+# cd ..
+# git clone https://github.com/suprajaspace/01.k8-expense.git
+# cd 01.k8-expense/
 kubectl apply -f namespace.yaml
 
 sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
-
 
 sudo ln -s /opt/kubectx/kubectx /usr/local/bin/kubectx
 
