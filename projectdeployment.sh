@@ -33,10 +33,10 @@ kubectl get pods
 # kubectl logs  backend-589d9cd455-kjprf
 # kubectl exec -it backend-589d9cd455-kjprf -- sh
 
-cd ..
-cd debug
-kubectl apply -f manifest.yaml
-kubectl get pods
+# cd ..
+# cd debug
+# kubectl apply -f manifest.yaml
+# kubectl get pods
 # kubectl exec -it debug -- bash
 
 # [root@debug /]# telnet mysql 3306
