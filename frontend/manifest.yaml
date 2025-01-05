@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: supraspace/frontend:v1
+        image: joindevops/frontend:v1
 
 ---
 kind: Service
@@ -32,8 +32,8 @@ metadata:
   name: frontend
   namespace: expense
 spec:
-  # type: LoadBalancer
-  type: NodePort
+  type: LoadBalancer
+  #type: NodePort
   selector:
     app: frontend
     tier: web
@@ -43,5 +43,5 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
-    nodePort: 30080
+   # nodePort: 30080
 
