@@ -24,7 +24,7 @@ spec:
       containers:
       - name: frontend
         image: supraspace/frontend:v1
-        
+
 ---
 kind: Service
 apiVersion: v1
@@ -32,7 +32,8 @@ metadata:
   name: frontend
   namespace: expense
 spec:
-  type: LoadBalancer
+  # type: LoadBalancer
+  type: NodePort
   selector:
     app: frontend
     tier: web
@@ -42,4 +43,5 @@ spec:
     protocol: TCP
     port: 80
     targetPort: 80
+    nodePort: 30080
 
