@@ -38,3 +38,6 @@ eksctl version
 
 echo "eksctl success"
 aws configure
+echo "aws configure success"
+sh clustercreation.sh
+

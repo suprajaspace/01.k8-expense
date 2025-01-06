@@ -1,7 +1,7 @@
-# kubectl get nodes
-# cd ..
+kubectl get nodes
+cd ..
 # git clone https://github.com/suprajaspace/01.k8-expense.git
-# cd 01.k8-expense/
+cd 01.k8-expense/
 kubectl apply -f namespace.yaml
 
 sudo git clone https://github.com/ahmetb/kubectx /opt/kubectx
@@ -14,6 +14,7 @@ kubens expense
 
 cd mysql
 kubectl apply -f manifest.yaml
+sleep 5
 kubectl get pods
 # kubectl exec -it mysql-77f4d45568-mqk4w -- bash
 # [expense@mysql-77f4d45568-mqk4w /]$ mysql -u root -pExpenseApp@1
@@ -27,6 +28,7 @@ kubectl get pods
 cd ..
 cd backend
 kubectl apply -f manifest.yaml
+sleep 10
 kubectl get svc
 kubectl get pods
 # kubectl logs  backend-589d9cd455-kjprf
@@ -53,6 +55,7 @@ kubectl get pods
 cd ..
 cd frontend
 kubectl apply -f manifest.yaml
+sleep 10
 kubectl get pods
 kubectl get svc
 
