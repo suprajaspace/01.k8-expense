@@ -23,7 +23,8 @@ spec:
     spec:
       containers:
       - name: frontend
-        image: supraspace/frontend1:v2
+        # image: supraspace/frontend1:v2
+        image: 861276084496.dkr.ecr.us-east-1.amazonaws.com/expense/frontend:v1
         resources:
           requests:
             cpu: 100m
