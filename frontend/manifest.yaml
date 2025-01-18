@@ -72,7 +72,7 @@ metadata:
   namespace: expense
 spec:
   serviceRef:
-    name: fronend
+    name: frontend
     port: 80
   targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:861276084496:targetgroup/expense-dev/12086f9ca5d117f9
   targetType: ip
