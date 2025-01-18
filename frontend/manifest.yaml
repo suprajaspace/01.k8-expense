@@ -31,7 +31,6 @@ spec:
           limits:
             cpu: 100m
             memory: 128Mi
-
 ---
 kind: Service
 apiVersion: v1
@@ -51,7 +50,6 @@ spec:
     port: 80
     targetPort: 80
    # nodePort: 30080
-
 ---
 apiVersion: autoscaling/v1
 kind: HorizontalPodAutoscaler
@@ -67,7 +65,6 @@ spec:
  maxReplicas: 10
  targetCPUUtilizationPercentage: 15
 ---
-
 apiVersion: elbv2.k8s.aws/v1beta1
 kind: TargetGroupBinding
 metadata:
@@ -75,7 +72,7 @@ metadata:
   namespace: expense
 spec:
   serviceRef:
-    name: fronend # route traffic to the awesome-service
+    name: fronend
     port: 80
   targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:861276084496:targetgroup/expense-dev/12086f9ca5d117f9
   targetType: ip
