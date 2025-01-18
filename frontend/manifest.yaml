@@ -24,13 +24,13 @@ spec:
       containers:
       - name: frontend
         image: supraspace/frontend1:v2
-        # resources:
-        #   requests:
-        #     cpu: 100m
-        #     memory: 128Mi
-        #   limits:
-        #     cpu: 100m
-        #     memory: 128Mi
+        resources:
+          requests:
+            cpu: 100m
+            memory: 128Mi
+          limits:
+            cpu: 100m
+            memory: 128Mi
 
 ---
 kind: Service
@@ -75,7 +75,7 @@ metadata:
   namespace: expense
 spec:
   serviceRef:
-    name: fronend# route traffic to the awesome-service
+    name: fronend # route traffic to the awesome-service
     port: 80
   targetGroupARN: arn:aws:elasticloadbalancing:us-east-1:861276084496:targetgroup/expense-dev/12086f9ca5d117f9
   targetType: ip
