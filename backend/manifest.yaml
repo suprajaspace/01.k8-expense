@@ -31,7 +31,8 @@ spec:
     spec:
       containers:
       - name: backend
-        image: supraspace/backend:v1
+        # image: supraspace/backend:v1
+        image: 861276084496.dkr.ecr.us-east-1.amazonaws.com/expense/backend:v1
         resources:
           requests:
             cpu: 100m
